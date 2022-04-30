@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/assets/app-preview.PNG.jpg)
+![](./src/assets/app-preview.PNG)
 
 ### Links
 
