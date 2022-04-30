@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import classes from './AdviceBox.module.css';
 import iconDice from '../../assets/icon-dice.svg';
@@ -6,13 +6,30 @@ import patternDividerMobile from '../../assets/pattern-divider-mobile.svg';
 import patternDividerDesktop from '../../assets/pattern-divider-desktop.svg';
 
 const AdviceBox = (props) => {
+  let content = <p className={classes.advice__quote}>Loading...</p>;
+
+  if (!props.isLoading) {
+    content = (
+      <Fragment>
+        <p className={classes.advice__number}>Advice #{props.adviceData.id}</p>
+        <blockquote className={classes.advice__quote}>
+          {props.adviceData.advice}
+        </blockquote>
+      </Fragment>
+    );
+  }
+
+  if (props.error) {
+    content = (
+      <p className={classes.advice__quote} style={{ color: '#fa5252' }}>
+        {props.error}
+      </p>
+    );
+  }
+
   return (
     <article className={classes.advice}>
-      <p className={classes.advice__number}>Advice #117</p>
-      <blockquote className={classes.advice__quote}>
-        "It is easy to sit up and take notice, what's difficult is getting up
-        and taking action."
-      </blockquote>
+      {content}
       <picture>
         <source
           srcSet={patternDividerMobile}
@@ -21,7 +38,7 @@ const AdviceBox = (props) => {
         <source srcSet={patternDividerDesktop} media="(min-width: 800px)" />
         <img src={patternDividerDesktop} alt="divider" />
       </picture>
-      <button className={classes['dice-button']}>
+      <button onClick={props.onButtonClick} className={classes['dice-button']}>
         <img src={iconDice} alt="dice icon" />
       </button>
     </article>
