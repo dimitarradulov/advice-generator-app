@@ -1,8 +1,12 @@
+import { Fragment } from 'react';
+
+import Container from './components/UI/Container/Container';
+
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <Fragment>
+      <Container></Container>
+    </Fragment>
   );
 }
 
