@@ -6,6 +6,7 @@
   background-color: hsl(217, 19%, 24%);
   border-radius: 1rem;
   padding: 3rem 2rem 5.5rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .advice__number {
