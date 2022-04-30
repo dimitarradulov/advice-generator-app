@@ -1,0 +1,42 @@
+.advice {
+  position: relative;
+  width: min(600px, 100%);
+  margin-inline: auto;
+  text-align: center;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 1rem;
+  padding: 3rem 2rem 5.5rem 2rem;
+}
+
+.advice__number {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+}
+
+.advice__quote {
+  color: hsl(193, 38%, 86%);
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+}
+
+.dice-button {
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  border: 0;
+  background-color: hsl(150, 100%, 66%);
+  padding: 2rem 2rem 1.75rem 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dice-button:hover {
+  box-shadow: 0 0 10px hsl(150, 100%, 60%), 0 0 40px hsl(150, 100%, 55%),
+    0 0 80px hsl(150, 100%, 50%);
+}
