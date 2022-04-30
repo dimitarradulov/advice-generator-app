@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState, useCallback } from 'react';
 
 import Container from './components/UI/Container/Container';
 import AdviceBox from './components/AdviceBox/AdviceBox';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [advice, setAdvice] = useState({});
@@ -44,6 +45,7 @@ function App() {
           onButtonClick={fetchAdvice}
         />
       </Container>
+      <Footer />
     </Fragment>
   );
 }
